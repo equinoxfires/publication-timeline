@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { config } from './config';
 import { Textfit } from 'react-textfit';
+import ImageLoader from 'react-imageloader';
+
+function preloader() {
+  return <img src="2.png" />;
+}
 
 export class Tags extends Component {
     constructor( props ) {
@@ -15,7 +20,12 @@ export class Tags extends Component {
         return (
             <div className="sidebar" id="profiler">
                 <div className="leftside display-pic">
-                    <img alt="bio_image" src={config.author.photo} />
+                    <ImageLoader
+                       src="2.png"
+                       wrapper={React.DOM.div}
+                       preloader={preloader}>
+                       Image load failed!
+                     </ImageLoader>
                 </div>
                 <div className="leftside person">
                     <Textfit mode="single" style={{color: "#FFF"}}>

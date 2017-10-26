@@ -1,5 +1,6 @@
 {
   "name": "publication-timeline",
+  "homepage": "http://equinoxfires.github.io/publication-timeline",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
